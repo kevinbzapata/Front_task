@@ -25,7 +25,7 @@ axiosInstance.interceptors.request.use(
     return config;
   },
   (error) => {
-    console.log('Error en interceptor de solicitud:', error);
+    console.log('Error en la solicitud:', error);
     return Promise.reject(error);
   }
 );

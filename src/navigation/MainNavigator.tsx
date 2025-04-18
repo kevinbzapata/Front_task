@@ -6,8 +6,6 @@ import TaskScreen from '../screens/TaskScreen';
 export type RootStackParamList = {
   Login: undefined;
   Tasks: undefined;
-  ForgotPassword: undefined;
-  SignUp: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -15,7 +13,6 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const MainNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Login">
-      {/* Pantallas deben ser los únicos hijos directos */}
       <Stack.Screen
         name="Login"
         component={LoginScreen}
@@ -26,7 +23,6 @@ const MainNavigator = () => {
         component={TaskScreen}
         options={{ headerShown: false }}
       />
-      {/* Otras pantallas... */}
     </Stack.Navigator>
   );
 };
